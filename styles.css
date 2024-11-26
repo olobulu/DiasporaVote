@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+/* General Header Styling */
+header {
+    position: fixed; /* Fixes the header to the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the header spans the full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: red;
+    z-index: 1000; /* Ensures the header stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #ff4500;
+}
+
+/* Donate Button Styling */
+.donate-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+    background-color: #e63e00;
+}
+
+/* Mobile Menu Styling */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list, .donate-btn {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        background-color: black;
+        width: 200px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li a {
+        text-align: center;
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: black; /* Fallback color */
+    background-image: url('images/with_rao.jpg'); /* Replace 'your-image-path.jpg' with the actual image URL */
+    background-size: cover; /* Makes the image cover the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white;
+    height: 95vh;
+}
+.join-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 45%;
+}
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .join-btn {
+        margin-top: 220%;
+    }
+}
+
+.info {
+    text-align: center;
+    padding: 50px;
+}
+
+.info h1 {
+    font-size: 56px;
+    color: #ff4500;
+    text-transform: uppercase;
+    text-align: center;
+}
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .info h1{
+        font-size: 40px; /* Full width */
+    }
+}
+
+.info h2 {
+    font-size: 28px;
+}
+.info1 {
+    padding: 40px;
+    background-color: black; /* Black background for contrast */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8; /* Better readability */
+    color: white; /* White text for contrast on black background */
+}
+
+.info1 h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Consistent capitalization */
+    font-weight: bold;
+}
+
+.info1 h2:nth-child(1) {
+    color: #ff4500; /* Vibrant orange */
+}
+
+.info1 h2:nth-child(4) {
+    color: #1e90ff; /* Blue */
+}
+
+.info1 h2:nth-child(7) {
+    color: #32cd32; /* Green */
+}
+
+.info1 h2:nth-child(10) {
+    color: #ff69b4; /* Pink */
+}
+
+.info1 p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #dcdcdc; /* Slightly lighter text for paragraphs */
+}
+
+.info1 br {
+    margin-top: 20px;
+}
+
+.info1 h2, .info1 p {
+    text-align: center; /* Center-align text for uniformity */
+}
+
+.info1 p {
+    max-width: 800px;
+    margin: 0 auto; /* Center content horizontally */
+}
+
+.info1 {
+    border: 1px solid #333; /* Dark border for subtle structure */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+}
+.carousel {
+    width: 70%; /* Full width */
+    overflow: hidden; /* Hides images outside the view */
+    margin: 20px auto;
+    position: relative;
+    height: auto; /* Adjust height to fit your images */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.carousel img {
+    width: 100%; /* Makes each image fit the carousel width */
+    flex: 0 0 100%; /* Each image takes full width of the carousel */
+    object-fit: cover; /* Ensures images don't distort */
+    border-radius: 8px; /* Optional: rounded corners */
+    height: 600px;
+}
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%; /* Full width */
+    }
+}
+
+.partners {
+    text-align: center;
+    padding: 50px;
+}
+
+.partner-logos img {
+    width: 150px;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+footer a {
+    color: red;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

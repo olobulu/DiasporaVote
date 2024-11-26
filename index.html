@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyans Abroad Voting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Kenya Diaspora Vote</div>
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="joinus.html">Join Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="activities.html">Activities</a></li>
+            </ul>
+        </nav>
+        
+        <button class="donate-btn">Donate</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <button class="join-btn">Join Us</button>
+    </section>
+
+    <!-- Information Section -->
+    <section class="info">
+        <h1>THINK LOCAL GO GLOBAL !</h1>
+        <p>#DiasporaVote! ensures greater representation and inclusion for Kenyans living abroad. We empower them to understand their voting rights, advocate for participation, and navigate Kenya's political and electoral processes.</p>
+    </section>
+
+    <!-- Information Section -->
+<section class="info1">
+    <h2>Amplifying the Voices of Kenyans in the Diaspora</h2>
+    <p>#DiasporaVote! ensures greater representation and inclusion for Kenyans living abroad. We help them advocate for their voting rights and stay engaged in Kenya's political and electoral processes.</p>
+    <br>
+    <br>
+    <h2>REPRESENTATION</h2>
+    <p>We act as a bridge for Kenyans in the diaspora to understand how government policies affect their rights and participation.</p>
+    <br>
+    <br>
+    <h2>EDUCATION</h2>
+    <p>We provide insights into Kenya's political and electoral systems, empowering diasporic communities with the knowledge to make informed decisions.</p>
+    <br>
+    <br>
+    <h2>OPPORTUNITIES</h2>
+    <p>Through our programs, we create opportunities for Kenyan youth in the diaspora to engage in policy-making and civic leadership.</p>
+    <br>
+    <br>
+    <div class="carousel">
+        <div class="carousel-track">
+            <img src="images/img1.jpeg" alt="Image 1">
+            <img src="images/img2.jpg" alt="Image 2">
+            <img src="images/img3.jpg" alt="Image 3">
+            <img src="images/img4.jpg" alt="Image 4">
+            <img src="images/img5.jpg" alt="Image 5">
+            <img src="images/img6.jpg" alt="Image 6">
+        </div>
+    </div>
+</section>
+
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <h2>Our Partners</h2>
+        <div class="partner-logos">
+            <img src="images/iebc.png" alt="Partner 1">
+            <img src="images/propeace.jpg" alt="Partner 2">
+            <img src="images/center.jpg" alt="Partner 3">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div>&copy; 2024 Kenya Diaspora Vote</div>
+        <div>Follow Us: <a href="#">Facebook</a> | <a href="#">Twitter</a></div>
+    </footer>
+    <script>
+        const track = document.querySelector('.carousel-track');
+const images = document.querySelectorAll('.carousel img');
+let index = 0;
+
+function moveCarousel() {
+    index++;
+    if (index >= images.length) {
+        index = 0;
+    }
+    track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Change image every 3 seconds
+setInterval(moveCarousel, 3000);
+
+    </script>
+</body>
+</html>
